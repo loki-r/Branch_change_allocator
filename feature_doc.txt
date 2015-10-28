@@ -1,0 +1,90 @@
+ROLL_NUMBER: Defines Id of the Student
+
+• Feature: Roll number field only accepts any number starting with 14 and containing 9 characters
+    __TestCases:
+       --Enter roll number not starting with 14
+
+         Expected Behavior: The UI shows an error notification to the user when submit button
+         is clicked  until the field is correctly populated.
+    __TestCases:
+       --Enter roll number with either greater than 9 characters 
+
+         Expected Behavior: The UI shows an error notification to the user when submit button
+         is clicked until the field is correctly populated.
+• Feature: Roll number Should not be empty
+   __TestCases:
+        --Try Empty Roll number for user
+          
+        Expected Behavior: The UI shows an error notification to the user when submit button is 
+          clicked and is rectified when above feature is satisfied by the Roll number.
+             
+NAME_OF_USER: Students Name or Identity.
+
+• Feature: Name should not be Empty
+   __TestCases:
+       --Try Empty name field
+ 
+         Expected Behavior: The UI shows an error notification to the user when submit button 
+             is clicked until the field is given some input.(Not empty input :P)
+
+CPI: Denotes Grade of a Student
+
+• Feature: CPI should lie 0 and 10 (inclusive)
+   __TestCases:
+      --Enter CPI <0 or >10
+
+        Expected Behavior: The UI shows an error notification to the user when Submit button 
+              is clicked until the field is corrected according to rule.
+
+• Feature: CPI should be a float (not contain characters '.'excluded)
+   __TestCases:
+      --Enter CPI as a.b.c 
+ 
+          Expected Behavior: The UI shows an error message (please enter valid number) to the
+              user when Submit button is clicked until the field is corrected in correspondance to
+              CPI definition. 
+  __TestCases:
+     --Try Entering CPI which some characters other than numbers and '.'
+
+       Expected Behavior: The UI doesn't allow you to do that.
+
+• Feature: CPI Should not be empty
+   __TestCases:
+        --Try Empty CPI for user
+          
+        Expected Behavior: The UI shows an error notification to the user when submit button is 
+          clicked and is rectified when above feature is satisfied by the CPI.
+
+CATEGORY:
+
+• Feature: Category is a drop down menu of which an option other than (please select a category should
+           be selected).
+  __TestCases:
+     --Try submit button without selecting any category
+
+       Expected Behavior: The UI shows an error notification to the user when submit button 
+              is clicked until error is rectified.
+
+LOGIN: User's requirement to provide admin with data
+  
+• Feature: Both User Id and Password should correspond to an account .
+   __TestCases:
+      --Enter Wrong User Id or wrong password
+ 
+        Expected Behavior: The UI shows an error notification when LOGIN button is clicked and 
+            is executed only if both user id and password are in correspondance to an account.
+
+
+LOGOUT: To prevent others from modifying a students data
+
+• Feature: Redirects to Login page.
+
+REGISTRATION_PAGE: To Have facility of having a Branch Change to Department of Choice based on CPI.
+
+• Feature: All fields except email are necessary 
+  __TestCases: Try keeping field other than email to be empty.
+
+    Expected Behavior: The UI shows an errors notification (this field is required* ) to the user 
+          if submit or Register button is clicked and is relieved only when all required fields are filled.
+   
+

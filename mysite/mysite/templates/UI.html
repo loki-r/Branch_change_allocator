@@ -1,0 +1,39 @@
+<html>
+<head>
+    <title>Branch Change</title>
+<style type="text/css">
+    ul.errorlist {
+        margin: 0;
+        padding: 0;
+    }
+    .errorlist li {
+        background-color: red;
+        color: white;
+        display: block;
+        font-size: 15px;
+        margin: 0 0 3px;
+        padding: 4px 5px;
+    }
+</style>
+</head>
+<body>
+    <center><h1>Branch Change</h1></center>
+
+	<center>
+	{% if form.errors %}
+        <p style="color: red;font-size:20px;">
+            Please correct the error{{ form.errors|pluralize }} below.
+        </p>
+    {% endif %}
+    </center>
+
+    <center><form action="" method="post">
+        <table>
+            {{ form.as_table }}
+        </table>
+        {% csrf_token %}
+        <input type="submit" value="Submit">
+    </form></center>
+    <center><a href="logout">Logout</a></center>
+</body>
+</html>

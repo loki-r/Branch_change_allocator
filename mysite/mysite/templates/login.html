@@ -1,0 +1,51 @@
+<html>
+<head>
+    <title>Login</title>
+</head>
+<body>
+    <center><h1>Login</h1></center>
+
+	<center>
+	{% if wrong_credentials %}
+        <p style="color: red;font-size:20px;">
+            The password or username you entered is incorrect.
+        </p>
+    {% endif %}
+    </center>
+
+    <center>
+    <form id="login_form" method="post" action="">
+    {% csrf_token %}
+    <table>    
+        <tr>
+            
+                <td>
+                    Username:
+                </td>
+
+                <td>
+                    <input type="text" name="username" value="" size="50" />
+                </td>
+            
+        </tr>
+        <tr>
+            
+                <td>
+                    Password:
+                </td>
+
+                <td>
+                    <input type="password" name="password" value="" size="50" />
+                </td>
+            
+        </tr>
+        <tr>
+        <td>
+            <input type="submit" value="submit" />
+        </td>
+        </tr>
+    </table>
+    </form>
+    </center>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<html>
+<head>
+    <title>Registration</title>
+
+<style type="text/css">
+    ul.errorlist {
+        margin: 0;
+        padding: 0;
+    }
+    .errorlist li {
+        background-color: red;
+        color: white;
+        display: block;
+        font-size: 15px;
+        margin: 0 0 3px;
+        padding: 4px 5px;
+    }
+</style> 
+</head>
+<body>
+    {% if registered %}
+    <center><strong>Registration Successful!</strong></center>
+    {% else %}
+    <center><h1>Registration</h1></center>
+    <center>
+	{% if user_form.errors %}
+        <p style="color: red;font-size:20px;">
+            Please correct the error{{ user_form.errors|pluralize }} below.
+        </p>
+    {% endif %}
+    </center>
+
+    <center><form action="" method="post">
+        <table>
+            {{ user_form.as_table }}
+        </table>
+        {% csrf_token %}
+        <input type="submit" value="Submit">
+    </form></center>
+    {% endif %}
+</body>
+</html>
